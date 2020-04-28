@@ -1,0 +1,83 @@
+.footer {
+  background-color: $color-secondary;
+  grid-column: full-start/full-end;
+ 
+  
+  padding: 8rem;
+   @media only screen and (max-width:$screen-xxlg){
+    padding: 5rem;
+   } 
+
+   @media only screen and (max-width:$screen-xlg){
+    padding: 5rem;
+   }
+
+   @media only screen and (max-width:$screen-lgr){
+    padding: 3rem;
+   }
+
+  &__item {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__copyright {
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    color: $color-grey-light-2;;
+   margin-top:6rem;
+   text-align: center;
+   width:70%;  //goes to right side so margin auto 
+   margin-left:auto;
+   margin-right:auto;
+  }
+}
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  // justify-items: center;
+  align-items: center;
+  @media only screen and (max-width:$screen-md){
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(3,1fr);
+    //width:40%;
+    //margin:0 auto;
+    //grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   }
+  @media only screen and (max-width:$screen-lgr){
+    grid-gap: 1.6rem;
+   }
+
+  
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-display;
+    text-align: center;
+  
+    padding: 1.5rem;
+    display: block;
+
+    transition: all .2s;
+  
+  }
+  &__link:hover,
+    &__link:active{
+        background-color:rgba($color:#fff, $alpha: 0.05);
+        transform: translateY(-3px);
+    }
+}
